@@ -1,0 +1,28 @@
+<ion-view class="background">
+  <ion-header-bar>
+    <h1 class="title">login</h1>
+  </ion-header-bar>
+  <ion-content class="bg-positive">
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" placeholder="Enter user name" ng-model="loginVC.user.username">
+      </label>
+      <label class="item item-input">
+        <input type="password" placeholder="Enter password" ng-model="loginVC.user.password">
+      </label>
+      <button class="button button-block button-positive" ng-click="loginVC.login()">
+        Login
+      </button>
+    </div>
+    <div>{{ loginVC.response }}</div>
+
+    <div class="list list-inset" ng-if="loginVC.logged">
+      <button class="button button-block button-positive" ng-click="loginVC.logout()">
+        Logout
+      </button>
+      <div>{{ logoutVC.response }}</div>
+    </div>
+
+  </ion-content>
+</ion-view>
+
